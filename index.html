@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặc Sản Tây Nguyên - Tinh Hoa Đại Ngàn</title>
+  <meta name="description" content="Cửa hàng cung cấp nông sản, đặc sản Tây Nguyên chính gốc: Cà phê, Mật ong rừng, Hạt mắc ca, Hồ tiêu...">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-text">Tây Nguyên <strong>Store</strong></span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#products-section" class="nav-link active">Sản phẩm</a>
+        <a href="#order-section" class="nav-link">Đặt hàng</a>
+      </nav>
+
+      <button id="cart-toggle-btn" class="cart-btn" aria-label="Xem giỏ hàng">
+        <span class="cart-label">Giỏ hàng</span>
+        <span id="cart-count" class="cart-badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <span class="hero-tagline">Hương vị đại ngàn hùng vĩ</span>
+      <h1 class="hero-title">Đặc Sản Tây Nguyên Chính Gốc</h1>
+      <p class="hero-desc">Mang trọn hương vị nguyên bản từ đất đỏ bazan, nắng gió cao nguyên đến tận bàn ăn gia đình bạn.</p>
+      <a href="#products-section" class="btn-primary">Khám phá ngay</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container main-content">
+    
+    <!-- Controls: Search & Category Filter -->
+    <section id="products-section" class="filter-section">
+      <div class="section-header">
+        <h2 class="section-title">Danh Sách Sản Phẩm</h2>
+        <p class="section-subtitle">Tuyển chọn các mặt hàng nông sản chất lượng cao nhất</p>
+      </div>
+
+      <div class="controls-wrapper">
+        <div class="search-box">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Tìm kiếm theo tên sản phẩm (vd: Cà phê, Mật ong...)" 
+            autocomplete="off"
+          >
+          <button id="clear-search-btn" class="clear-btn" title="Xóa tìm kiếm">&times;</button>
+        </div>
+
+        <div class="filter-box">
+          <label for="category-filter">Danh mục:</label>
+          <select id="category-filter">
+            <option value="all">Tất cả sản phẩm</option>
+            <option value="ca-phe">Cà phê</option>
+            <option value="mat-ong">Mật ong</option>
+            <option value="mac-ca">Mắc ca</option>
+            <option value="gia-vi">Gia vị</option>
+            <option value="hoa-qua">Trái cây</option>
+            <option value="dac-san-khac">Đặc sản khác</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="products-container">
+      <div id="product-list" class="product-grid">
+        <!-- Render động danh sách sản phẩm bằng JS -->
+      </div>
+      <div id="empty-state" class="empty-state hidden">
+        <h3>Không tìm thấy sản phẩm phù hợp</h3>
+        <p>Vui lòng thử lại với từ khóa khác hoặc chuyển danh mục hiển thị.</p>
+      </div>
+    </section>
+
+    <!-- Order & Checkout Section -->
+    <section id="order-section" class="order-section">
+      <div class="section-header">
+        <h2 class="section-title">Thông Tin Đặt Hàng</h2>
+        <p class="section-subtitle">Điền thông tin giao hàng để chúng tôi phục vụ bạn tốt nhất</p>
+      </div>
+
+      <div class="order-layout">
+        <!-- Order Summary Preview -->
+        <div class="order-summary-card">
+          <h3>Tóm tắt giỏ hàng</h3>
+          <div id="order-cart-items" class="cart-items-mini">
+            <p class="empty-cart-hint">Giỏ hàng của bạn đang trống. Hãy chọn sản phẩm trước khi đặt hàng!</p>
+          </div>
+          <div class="order-total-row">
+            <span>Tổng thanh toán:</span>
+            <strong id="order-total-price">0 đ</strong>
+          </div>
+        </div>
+
+        <!-- Checkout Form -->
+        <div class="form-card">
+          <form id="order-form" novalidate>
+            <div class="form-group">
+              <label for="customer-name">Họ và tên <span class="required">*</span></label>
+              <input type="text" id="customer-name" placeholder="Ví dụ: Nguyễn Văn An">
+              <span class="error-message" id="error-customer-name"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Số điện thoại <span class="required">*</span></label>
+              <input type="tel" id="phone" placeholder="Ví dụ: 0912345678 (gồm 10 số)">
+              <span class="error-message" id="error-phone"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Địa chỉ nhận hàng <span class="required">*</span></label>
+              <input type="text" id="address" placeholder="Số nhà, tên đường, phường/xã, quận/huyện...">
+              <span class="error-message" id="error-address"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="note">Ghi chú đơn hàng (tuỳ chọn)</label>
+              <textarea id="note" rows="3" placeholder="Yêu cầu giao hàng, thời gian nhận hàng..."></textarea>
+            </div>
+
+            <button type="submit" id="submit-order-btn" class="btn-submit">
+              <span>Gửi Đơn Hàng</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Đặc Sản Tây Nguyên. Đồ án xây dựng chức năng tương tác và kiểm tra dữ liệu bằng Javascript DOM.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
