@@ -452,34 +452,34 @@ body {
 
 .card-footer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.65rem;
   padding-top: 0.85rem;
   border-top: 1px dashed var(--border-color);
   margin-top: auto;
 }
 
 .card-price {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--accent-gold);
   white-space: nowrap;
-  flex-shrink: 0;
 }
 
 .btn-add-to-cart {
+  width: 100%;
   background: var(--primary-color);
   color: white;
   border: none;
-  padding: 0.55rem 0.85rem;
-  border-radius: var(--radius-md);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all var(--transition-fast);
 }
 
@@ -489,7 +489,7 @@ body {
 }
 
 .btn-add-to-cart:active {
-  transform: scale(0.96);
+  transform: scale(0.98);
 }
 
 /* Empty State */
