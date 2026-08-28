@@ -414,34 +414,40 @@ body {
 }
 
 .card-body {
-  padding: 1.35rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .product-card h3 {
-  font-size: 1.15rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--primary-dark);
   margin-bottom: 0.35rem;
   line-height: 1.35;
+  min-height: 2.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card-origin {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .card-desc {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: #495057;
   margin-bottom: 1.25rem;
-  flex: 1;
+  min-height: 2.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card-footer {
@@ -451,6 +457,7 @@ body {
   gap: 0.5rem;
   padding-top: 0.85rem;
   border-top: 1px dashed var(--border-color);
+  margin-top: auto;
 }
 
 .card-price {
