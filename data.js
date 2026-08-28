@@ -7,7 +7,7 @@ const products = [
     price: 135000,
     origin: "Đắk Lắk",
     stock: 25,
-    image: "images/ca-phe-robusta.jpg",
+    image: "images/robusta.png",
     description: "Hương vị đậm đà nguyên bản từ vùng đất đỏ bazan Đắk Lắk."
   },
   {
@@ -18,7 +18,7 @@ const products = [
     price: 180000,
     origin: "Lâm Đồng",
     stock: 15,
-    image: "images/ca-phe-arabica.jpg",
+    image: "images/arabica.png",
     description: "Vị chua thanh quyến rũ, hậu vị ngọt ngào đặc trưng vùng cao nguyên."
   },
   {
@@ -29,7 +29,7 @@ const products = [
     price: 220000,
     origin: "Gia Lai",
     stock: 30,
-    image: "images/mat-ong-hoa-ca-phe.jpg",
+    image: "images/matonghoarung.png",
     description: "Màu vàng óng ánh, thơm dịu hương hoa cà phê mùa xuân."
   },
   {
@@ -40,7 +40,7 @@ const products = [
     price: 350000,
     origin: "Kon Tum",
     stock: 8,
-    image: "images/mat-ong-rung.jpg",
+    image: "images/matongrung.png",
     description: "Mật ong tự nhiên từ các cánh rừng nguyên sinh đại ngàn."
   },
   {
@@ -51,7 +51,7 @@ const products = [
     price: 165000,
     origin: "Đắk Nông",
     stock: 40,
-    image: "images/hat-mac-ca.jpg",
+    image: "images/macca.png",
     description: "Hạt bùi béo, giàu dinh dưỡng và khoáng chất tự nhiên."
   },
   {
@@ -62,7 +62,7 @@ const products = [
     price: 95000,
     origin: "Gia Lai",
     stock: 50,
-    image: "images/tieu-den.jpg",
+    image: "images/tieuden.png",
     description: "Hạt chắc, thơm nồng cay tự nhiên nức tiếng Gia Lai."
   },
   {
@@ -73,7 +73,7 @@ const products = [
     price: 85000,
     origin: "Lâm Đồng",
     stock: 12,
-    image: "images/bo-sap.jpg",
+    image: "images/bosap.png",
     description: "Cơm vàng dẻo quánh, vỏ mỏng hạt tiêu chuẩn xuất khẩu."
   },
   {
@@ -84,7 +84,7 @@ const products = [
     price: 260000,
     origin: "Đắk Lắk",
     stock: 10,
-    image: "images/ruou-can.jpg",
+    image: "images/ruoucan.jpg",
     description: "Hương vị men lá rừng nồng nàn văn hóa nhà rông Tây Nguyên."
   }
 ];
